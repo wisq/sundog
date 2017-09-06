@@ -1,0 +1,44 @@
+:Data_list: RTST-yest.txt
+:Created: 2017 Sep 05 2330 UTC
+# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center.
+# Please send comments and suggestions to swpc.webmaster@noaa.gov
+#
+# Label: Hap = 3 hour Planetary A Geomagnetic index updated hourly.
+# Label: int.ap = Integral of Planetary Ap Geomagnetic index over the previous 33 values
+# Label: +70 = Correction factor at 70N Geomagnetic latitude
+# Label: +50 = Correction factor at 50N Geomagnetic latitude
+# Label: +30 = Correction factor at 30N Geomagnetic latitude
+# Label: -30 = Correction factor at 30S Geomagnetic latitude
+# Label: -50 = Correction factor at 50S Geomagnetic latitude
+# Label: -70 = Correction factor at 70S Geomagnetic latitude
+# Source: Hap is from USAF Hourly Magnetometer Analysis Report
+# Missing Data: linearly interpolated: 0 = not interpolated
+#
+#    STORM Time Empirical Ionospheric Correction Model
+#
+# UTC  Hap int.ap  +70  +50  +30  -30  -50  -70  interpolated
+#------------------------------------------------------------
+   0   32  229.4  1.00 1.00 1.00 1.01 1.01 1.01       0
+   1   32  236.2  1.00 1.00 1.00 1.01 1.01 1.02       0
+   2   32  240.3  1.00 1.00 1.00 1.01 1.01 1.02       0
+   3   18  251.9  1.00 1.00 1.00 1.01 1.02 1.02       0
+   4   18  257.0  1.00 1.00 1.00 1.01 1.02 1.03       0
+   5   15  265.3  1.00 1.00 1.00 1.01 1.02 1.03       0
+   6   15  275.2  1.00 1.00 1.00 1.02 1.03 1.03       0
+   7    7  289.9  0.99 1.00 1.00 1.02 1.03 1.04       0
+   8    9  300.9  0.99 1.00 1.00 1.02 1.03 1.04       0
+   9    9  306.3  0.99 1.00 1.00 1.02 1.03 1.04       0
+  10   12  310.3  0.99 1.00 1.00 1.02 1.03 1.04       0
+  11   12  311.8  0.99 1.00 1.00 1.02 1.03 1.04       0
+  12    6  314.7  0.99 1.00 1.00 1.02 1.03 1.04       0
+  13    7  307.9  0.99 1.00 1.00 1.02 1.03 1.04       0
+  14    7  297.2  0.99 1.00 1.00 1.02 1.03 1.04       0
+  15    9  286.1  0.99 1.00 1.00 1.02 1.03 1.04       0
+  16    4  280.3  1.00 1.00 1.00 1.02 1.03 1.04       0
+  17    4  274.7  1.00 1.00 1.00 1.02 1.03 1.03       0
+  18    9  265.9  1.00 1.00 1.00 1.01 1.02 1.03       0
+  19   12  259.9  1.00 1.00 1.00 1.01 1.02 1.03       0
+  20    0  256.5  1.00 1.00 1.00 1.01 1.02 1.02       0
+  21    0  246.6  1.00 1.00 1.00 1.01 1.02 1.02       0
+  22   15  229.5  1.00 1.00 1.00 1.01 1.01 1.01       0
+  23    7  223.1  1.00 1.00 1.00 1.00 1.01 1.01       0

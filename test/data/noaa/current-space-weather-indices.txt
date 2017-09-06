@@ -1,0 +1,36 @@
+:Product: Current Space Weather Indices curind.txt
+:Issued: 2017 Sep 06 0934 UTC
+# Prepared by the US Dept. of Commerce, NOAA, Space Weather Prediction Center
+# Product description and SWPC contact on the Web
+# http://www.swpc.noaa.gov/wwire.html
+#
+#                       Current Space Weather Indices
+:Solar_Radio_Flux: 2017 Sep 06
+#      Learmonth  San Vito   Sag Hill  Penticton  Penticton  Palehua  Penticton
+#        0400       1000       1700       1700       2000       2300       2300
+  245    170         -1         -1         -1         -1         -1         -1
+  410     59         -1         -1         -1         -1         -1         -1
+  610     52         -1         -1         -1         -1         -1         -1
+ 1415     -1         -1         -1         -1         -1         -1         -1
+ 2695    104         -1         -1         -1         -1         -1         -1
+ 2800     -1         -1         -1         -1         -1         -1         -1
+ 4995    160         -1         -1         -1         -1         -1         -1
+ 8800    277         -1         -1         -1         -1         -1         -1
+15400    569         -1         -1         -1         -1         -1         -1
+#
+#
+:Energetic_Particle_Flux: 2017 Sep 06 0925 UT
+#
+# Current Readings
+#      GOES-13 Proton Flux      GOES-13 Electron Flux  GOES15  GOES13   Neutron
+# ----- Protons/cm2-s-sr -----  -Electrons/cm2-s-sr -  X-ray  Location  Monitor
+#   >1 MeV   >10 MeV  >100 MeV   >0.8 MeV     >2 MeV   flux     West    cts/min
+  9.86e+03  2.61e+01  7.31e-02   3.23e+04   1.54e+03   M6.5      75        -1
+#
+#
+:Geomagnetic_Values: 2017 Sep 06
+#
+#          Middle Latitude                      Estimated
+#------------- Boulder -------------     ------ Planetary ------
+#Running A   03-06-09-12-15-18-21-24     03-06-09-12-15-18-21-24
+     9        1  2  2 -1 -1 -1 -1 -1      2  2  2 -1 -1 -1 -1 -1

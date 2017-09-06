@@ -1,0 +1,74 @@
+:Product: Forecast Discussion
+:Issued: 2017 Sep 06 0030 UTC
+# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center
+#
+Solar Activity
+
+.24 hr Summary...
+Solar activity was at moderate levels. Region 2673 (S09W30,
+Dkc/beta-gamma-delta), produced several M-class flares, the largest of
+which was an M4 flare at 05/0108 UTC. This region continued to show some
+growth throughout the period, and remained a magnetically complex and
+active sunspot region. Region 2674 (N14W14, Fhi/beta) was inactive for
+the period despite its potential. The remaining regions were stable and
+inactive as well.
+
+Multiple WSA/Enlil model runs have converged on a mid-to-late day
+arrival of the 04 Sep CME on day one (06 Sep). No other Earth-directed
+CMEs were observed in available coronagraph imagery.
+
+.Forecast...
+Solar activity is expected to be at moderate to high levels over the
+next three days (06-08 Sep), mostly due to the flare potential and
+recent history of Region 2673. Radio blackouts reaching the R1-R2
+(Minor-Moderate) levels are expected for the next three days (06-08
+Sep), with a chance for R3 (Strong) radio blackouts.
+
+Energetic Particles
+
+.24 hr Summary...
+The greater than 2 MeV electron flux reached high levels with a maximum
+flux of 3,780 pfu observed at 05/1730 UTC. The greater than 10 MeV
+proton flux reached S2 (Moderate) levels with a peak flux of 210 pfu at
+05/1930 UTC.
+
+.Forecast...
+The greater than 2 MeV electron flux is expected to continue at high
+levels for the next three days (06-08 Sep). The greater than 10 MeV
+proton flux is expected to continue at S2 (Moderate) levels over the
+next two days (06-07 Sep) with a chance for S1 (Minor) levels on day
+three (08 Sep).
+
+Solar Wind
+
+.24 hr Summary...
+The solar wind environment was enhanced at times due to lingering
+effects from a polar-connected, positive polarity CH HSS. Solar wind
+speeds began the period around 515 km/s, increased to 630 km/s, then
+gradually decreased to around 475 km/s by the end of the day. Total
+magnetic field strength was elevated early in the period between 7 and
+10 nT before settling out around 5 nT by days end. Bz deflected
+southward early in the period to -5 nT, then was mostly variable. Phi
+angle was mostly in a positive orientation.
+
+.Forecast...
+The solar wind environment is expected to remain enhanced on days one
+and two (06-07 Sep) due to impact from the 04 Sep CME. Elevated solar
+wind parameters are expected into day three (08 Sep) with the onset of a
+recurrent, negative polarity CH HSS, in addition to lingering CME
+effects.
+
+Geospace
+
+.24 hr Summary...
+The geomagnetic field was mostly at quiet to unsettled levels with an
+isolated active period at the start of the day.
+
+.Forecast...
+The geomagnetic field is expected to start off at quiet to unsettled
+levels on day one (06 Sep). G3 (Strong) geomagnetic storm levels are
+likely by mid-to-late day with the arrival of the 04 CME. G3 conditions
+are again likely into day two (07 Sep) due to ongoing CME effects. Day
+three (08 Sep) is expected to be at mostly active levels with a chance
+for G1 (Minor) storm levels being reached due to the onset of a
+recurrent, negative polarity CH HSS, and any residual CME effects.

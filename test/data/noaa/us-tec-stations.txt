@@ -1,0 +1,74 @@
+:Product: 201709061000_stations.txt 
+:Created: 2017 Sep 06 1021 UTC
+# United States Total Electron Content (USTEC), Operational Version 2.0
+# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center. 
+# 
+# Source: Ground-based GPS data from NGS, CORS, RTIGS, GPS/MET
+# Time Range: 2017 Sep 06 1000 - 1015 UTC
+# Number of Stations: 59
+# Cadence: 15 minutes
+# URL: http://www.swpc.noaa.gov/products/us-total-electron-content
+#
+# See http://www.ngs.noaa.gov/CORS/dates_sites.txt for station information.
+#
+#              Network Stations used in USTEC calculations
+#-------------------------------------------------------------------------
+acu5  
+ais5  
+anp5  
+bet1  
+brw1  
+ccv5  
+ccv6  
+cme5  
+det6  
+fai1  
+gwn5  
+gwn6  
+hdf5  
+hdf6  
+jnu1  
+kns5  
+kok5  
+kok6  
+mcd6  
+mmd1  
+mmx1  
+mor5  
+mor6  
+mpr1  
+msd1  
+mtp1  
+otz1  
+pnb5  
+pot5  
+shk5  
+shk6  
+upo5  
+upo6  
+whd5  
+yfb1  
+yqx1  
+ywg1  
+yyr1  
+zab1  
+zab2  
+zan1  
+zau1  
+zbw1  
+zdv1  
+zfw1  
+zhn1  
+zhu1  
+zjx1  
+zkc1  
+zla1  
+zma1  
+zme1  
+zmp1  
+zny1  
+zoa1  
+zoa2  
+zob1  
+zse1  
+ztl4  

@@ -1,0 +1,39 @@
+:Product: 27-day Space Weather Outlook Table 27DO.txt
+:Issued: 2017 Sep 04 0551 UTC
+# Prepared by the US Dept. of Commerce, NOAA, Space Weather Prediction Center
+# Product description and SWPC contact on the Web
+# http://www.swpc.noaa.gov/wwire.html
+#
+#      27-day Space Weather Outlook Table
+#                Issued 2017-09-04
+#
+#   UTC      Radio Flux   Planetary   Largest
+#  Date       10.7 cm      A Index    Kp Index
+2017 Sep 04     120          10          4
+2017 Sep 05     118           8          3
+2017 Sep 06     116           5          2
+2017 Sep 07     116          15          4
+2017 Sep 08     116          15          4
+2017 Sep 09     105           8          3
+2017 Sep 10      90           5          2
+2017 Sep 11      85           5          2
+2017 Sep 12      80           5          2
+2017 Sep 13      80          25          5
+2017 Sep 14      85          30          6
+2017 Sep 15      85          30          6
+2017 Sep 16      85          25          5
+2017 Sep 17      85          12          4
+2017 Sep 18      88           5          2
+2017 Sep 19      92           5          2
+2017 Sep 20      92           8          3
+2017 Sep 21      92           5          2
+2017 Sep 22      95           5          2
+2017 Sep 23      98           8          3
+2017 Sep 24     100           5          2
+2017 Sep 25     105           8          3
+2017 Sep 26     110           5          2
+2017 Sep 27     110          20          5
+2017 Sep 28     110          20          5
+2017 Sep 29     110          20          5
+2017 Sep 30     110          12          4
+

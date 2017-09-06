@@ -1,0 +1,25 @@
+:Product: Geomagnetic Forecast
+:Issued: 2017 Sep 05 2205 UTC
+# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center
+#
+NOAA Ap Index Forecast
+Observed Ap 04 Sep 018
+Estimated Ap 05 Sep 012
+Predicted Ap 06 Sep-08 Sep 040-048-024
+
+NOAA Geomagnetic Activity Probabilities 06 Sep-08 Sep
+Active                01/01/35
+Minor storm           19/19/30
+Moderate storm        30/30/01
+Strong-Extreme storm  51/51/01
+
+NOAA Kp index forecast 06 Sep - 08 Sep
+             Sep 06    Sep 07    Sep 08
+00-03UT        3         7         4
+03-06UT        3         6         4
+06-09UT        3         5         4
+09-12UT        3         5         3
+12-15UT        3         4         3
+15-18UT        6         4         3
+18-21UT        6         4         4
+21-00UT        7         4         4

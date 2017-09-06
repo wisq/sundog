@@ -1,0 +1,69 @@
+:Product: 3-day Space Weather Predictions daypre.txt
+:Issued: 2017 Sep 05 2200 UTC
+# Prepared by the US Dept. of Commerce, NOAA, Space Weather Prediction Center
+# Product description and SWPC contact on the Web
+# http://www.swpc.noaa.gov/wwire.html
+#
+#             3-day Space Weather Predictions
+#
+:Prediction_dates:   2017 Sep 06   2017 Sep 07   2017 Sep 08
+:Geomagnetic_A_indices:
+A_Fredericksburg         22            26            20
+A_Planetary              40            48            24
+#
+# Predicted 3-hour Middle latitude k-indices
+:Pred_Mid_k:
+Mid/00-03UT               3             5             4
+Mid/03-06UT               3             5             4
+Mid/06-09UT               3             4             3
+Mid/09-12UT               3             4             3
+Mid/12-15UT               3             3             3
+Mid/15-18UT               4             3             3
+Mid/18-21UT               4             3             3
+Mid/21-00UT               5             3             4
+#
+# Predicted 3-hour High latitude k-indices
+:Pred_High_k:
+High/00-03UT              3             5             3
+High/03-06UT              2             5             4
+High/06-09UT              3             5             4
+High/09-12UT              4             6             5
+High/12-15UT              5             6             4
+High/15-18UT              6             5             4
+High/18-21UT              5             3             4
+High/21-00UT              4             3             3
+#
+# Probability of Geomagnetic conditions at Middle Latitude
+:Prob_Mid:
+Mid/Active               15            15            35
+Mid/Minor_Storm          40            35            15
+Mid/Major-Severe_Storm   45            50             1
+#
+# Probability of Geomagnetic conditions at High Latitudes
+:Prob_High:
+High/Active               1            15            15
+High/Minor_Storm         10            35            20
+High/Major-Severe_Storm  90            45            20
+#
+# Polar Cap Absorption Forecast
+:Polar_cap:
+                      red
+#
+# Solar
+:10cm_flux:
+                        120           115           115
+#
+:Whole_Disk_Flare_Prob:
+Class_M                  75            75            75
+Class_X                  25            25            25
+Proton                   99            70            15
+#
+# Region Flare Probabilities for 2017 Sep 06
+# Region     Class C      M             X             P
+:Reg_Prob: 2017 Sep 05
+  2673         95        55            25            95
+  2674         75        20             1             1
+  2675          5         1             1             1
+  2676          5         1             1             1
+  2677          5         1             1             1
+  2678          5         1             1             1

@@ -1,0 +1,81 @@
+:Product: Weekly Highlights and Forecasts
+:Issued: 2017 Sep 04 0551 UTC
+# Prepared by the US Dept. of Commerce, NOAA, Space Weather Prediction Center
+# Product description and SWPC contact on the Web
+# http://www.swpc.noaa.gov/weekly.html
+#
+#                Weekly Highlights and Forecasts
+#
+Highlights of Solar and Geomagnetic Activity
+28 August - 03 September 2017
+
+Solar activity ranged from very low to low levels. Very low levels
+were observed on 31 Aug while low levels dominated the period from
+28-30 Aug and again from 01-03 Sep. The period began as Regions 2673
+(S10, L=117, class/area Dsc/130 on 03 Sep) and 2674 (N14, L=103,
+class/area Fhc/930 on 03 Sep) were rotating onto the east limb as
+simple alpha and beta magnetic configurations on 28-29 Sep,
+respectively. Region 2672 (N08, L=227, class/area Dao/270 on 22 Aug)
+was in decay as it approached the west limb on 01 Sep. By midday on
+01 Sep, Region 2674 began a growth phase which increased its overall
+area to approximately 930 millionths and produced 12 C-class flares
+including a C5/Sf at 30/1845 UTC. Region 2673 began a slow growth
+phase on 02 Sep, however rapid spot development occurred on 03 Sep
+increasing its area to approximately 130 millionths with a
+Dsc/beta-gamma spot classification. The largest flare of the period
+was a C7 observed at 02/1541 UTC, with an associated Type II (976
+km/s) radio burst and non-Earth directed coronal mass ejection
+(CME), from Region 2672. 
+
+An earlier CME was observed off the west limb on SOHO/LASCO C3
+imagery at approximately 28/1930 UTC. This CME was analyzed and it
+was determined there was a possibility of a glancing blow on 01 Sep,
+however no definitive signs were observed in solar wind data. 
+
+No proton events were observed at geosynchronous orbit.
+
+The greater than 2 MeV electron flux at geosynchronous orbit was at
+normal levels on 30-31 Aug, moderate levels on 28 Aug, and at high
+levels on 29 Aug and 01-03 Sep. The largest flux of the period was
+12,319 pfu observed at 03/1705 UTC. 
+
+Geomagnetic field activity ranged from quiet to G1 (Minor) storm
+levels during the period. Solar wind speed appeared to be in decline
+from approximately 500 km/s to around 350 km/s by 29 Aug with total
+field around 6-8 nT. Solar wind speed, temperature, and density was
+unreliable in DSCOVR solar wind data between 28/0600 UTC and 29/1655
+UTC. A solar sector boundary crossing into a negative sector was
+observed at approximately 29/1925 UTC with a brief increase in total
+field to 13 nT. The Bz component deflected southward to -10 nT. The
+geomagnetic field responded with quiet levels on 28 and 30 Aug while
+quiet to active levels were observed on 29 Aug. At approximately
+31/0100 UTC total field began to increase, phi angle switched into a
+positive sector, and solar wind speed and temperature began to rise
+as a positive polarity coronal hole high speed stream (CH HSS) moved
+into a geoeffective position. Total field reached a maximum of 30 nT
+at 31/0615 UTC. Solar wind speed was mostly between 530 km/s to 680
+km/s through 03 Sep and then began to decline to approximately 480
+km/s by the end of the period. The geomagnetic field responded with
+quiet to G1 (Minor) storm levels on 31 Aug and 02 Sep, quiet to
+active levels on 01 Sep, and quiet to unsettled levels on 03 Sep. 
+
+Forecast of Solar and Geomagnetic Activity
+04 September - 30 September 2017
+
+Solar activity is expected to be at low levels with a chance for
+M-class (R1-R2, Minor-Moderate) flares from 04-11 Sep and again from
+14-30 Sep due to potential significant flare activity from Region
+2673, 2674, and the return of old Region 2672. Very low levels are
+expected from 12-13 Sep. 
+
+No proton events are expected at geosynchronous orbit.
+
+The greater than 2 MeV electron flux at geosynchronous orbit is
+expected to be at normal to moderate levels on 07, 13, 21-27 Sep.
+High levels are expected on 04-06, 08-12, 14-20, and 28-30 Sep due
+to CH HSS influence. 
+
+Geomagnetic field activity is expected to be at unsettled to active
+levels on 04, 07-09, 13-17, 27-30 Sep with G1 (Minor) geomagnetic
+storm levels likely on 13-16, 27-29 Sep and G2 (Moderate) storm
+levels likely on 14-15 Sep due to recurrent CH HSS activity. 

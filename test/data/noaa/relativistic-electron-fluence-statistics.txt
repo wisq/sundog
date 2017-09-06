@@ -1,0 +1,24 @@
+:Data_list: stats.txt
+:Created: 2016 Mar 14 0014 UTC
+#
+# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center.
+# Please send comments and suggestions to SWPC.Webmaster@noaa.gov
+#
+#         Relativistic Electron Forecast Model - Performance Statistics
+#             Based on observed solar wind speed from ACE spacecraft
+#                           (ACE mode, 00 UTC Model Run)
+#
+# See documentation for details: http://www.sec.noaa.gov/refm/doc/REFMDoc.html
+#
+# Statistics based on REFM output from: 3/14/2015 - 3/13/2016 
+#
+# Missing data: -9.99
+#
+#-------------------------------------------------------------------------------
+# Forecast  --------- Complete Stats ---------- ---- Stats for Last 30 Days ----
+# Lead Time Prediction  --- Skill Score vs --- Prediction --- Skill Score vs ---
+#  (Days)   Efficiency  Persistence Recurrence Efficiency Persistence Recurrence
+#-------------------------------------------------------------------------------
+    + 1        0.72         0.28       0.81       0.83        0.47       0.93
+    + 2        0.49         0.37       0.65       0.07       -0.10       0.64
+    + 3        0.33         0.44       0.55      -0.48       -0.09       0.43

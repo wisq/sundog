@@ -1,0 +1,48 @@
+:Product: Solar and Geophysical Activity Summary
+:Issued: 2017 Sep 06 0245 UTC
+# Prepared jointly by the U.S. Dept. of Commerce, NOAA,
+# Space Weather Prediction Center and the U.S. Air Force.
+#
+Joint USAF/NOAA Solar and Geophysical Activity Summary
+SGAS Number 249 Issued at 0245Z on 06 Sep 2017
+This report is compiled from data received at SWO on 05 Sep
+A.  Energetic Events
+Begin  Max  End  Rgn   Loc   Xray  Op 245MHz 10cm   Sweep
+ 0103 0108 0111  2673        M4.2                                   
+ 0342 0351 0404  2673        M1.0                                   
+ 0433 0453 0507  2673        M3.2                      IV           
+ 0633 0640 0643  2673        M3.8                                   
+ 0730 0730 0731                       1900                          
+ 0741 0741 0741                       120                           
+ 0744 0749 0751                       340                           
+ 0756 0756 0756                       340                           
+ 0802 0802 0803                       170                           
+ 0802 0802 0802                       120                           
+ 0805 0805 0805                       170                           
+ 0947 0950 0956                       180                           
+ 1013 1019 1025  2673        C5.4     200                           
+ 1056 1056 1057                       140                           
+ 1408 1418 1453  2673 S09W22       Sf 700                           
+ 1737 1743 1751  2673 S09W24 M2.3  1n                               
+ 1811 1813 1814                       800                           
+ 1839 1839 1839                       910                           
+ 2111 2112 2116  2673 S07W32       Sf 150                           
+ 2118 2118 2118                       310                           
+ 2312 2313 2313                       120                           
+ 2315 2316 2316                       150                           
+B.  Proton Events:  The greater than 10 MeV proton flux reached
+moderate levels with a peak flux of 210 pfu at 05/1930 UTC.
+C.  Geomagnetic Activity Summary:  The geomagnetic field was quiet to
+unsettled.
+D.  Stratwarm:  Not Available
+E.  Daily Indices: (real-time preliminary/estimated values)
+10 cm 121  SSN 122  Afr/Ap 011/011   X-ray Background C1.2
+Daily Proton Fluence (flux accumulation over 24 hrs)
+GT 1 MeV 1.1e+09   GT 10 MeV 8.0e+06 p/(cm2-ster-day)
+(GOES-13 satellite synchronous orbit W75 degrees)
+Daily Electron Fluence
+GT 2 MeV 1.50e+08 e/(cm2-ster-day)
+(GOES-13 satellite synchronous orbit W75 degrees)
+3 Hour K-indices:
+Boulder 3 3 3 2 3 3 3 1 Planetary 3 3 2 2 2 2 3 2 
+F.  Comments:  None

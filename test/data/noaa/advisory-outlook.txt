@@ -1,0 +1,22 @@
+:Product: Advisory Outlook advisory-outlook.txt
+:Issued: 2017 Sep 04 0555 UTC
+#
+# Prepared by the Dept. of Commerce, NOAA, Space Weather Prediction Center
+# Please send comments and suggestions to SWPC.Webmaster@noaa.gov
+#-------------------------------------------------------------------------
+Official Space Weather Advisory issued by NOAA Space Weather Prediction Center
+Boulder, Colorado, USA
+
+SPACE WEATHER ADVISORY OUTLOOK #17-36
+2017 September 3 at 11:52 p.m. MDT (2017 September 4 0552 UTC)
+
+**** SPACE WEATHER OUTLOOK ****
+
+Summary For August 28-September 3
+
+G1 (Minor) geomagnetic storm levels were observed on 31 August and 02 September due to coronal hole high speed stream effects.
+
+Outlook For September 4-10
+
+There is a chance for R1-R2 (Minor-Moderate) radio blackouts for 04-10 September due to potential significant flare activity from active sunspot Regions 2673 and 2674. 
+
