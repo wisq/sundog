@@ -27,6 +27,8 @@ defmodule Sundog.Mixfile do
       {:httpoison, "~> 0.13"},
       {:timex, "~> 3.1"},
       {:poison, "~> 3.1"},
+      {:memoize, "~> 1.2"},
+      {:mock, "~> 0.2.0", only: :test},
     ]
   end
 end
