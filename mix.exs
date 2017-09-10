@@ -26,6 +26,7 @@ defmodule Sundog.Mixfile do
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:httpoison, "~> 0.13"},
       {:timex, "~> 3.1"},
+      {:poison, "~> 3.1"},
     ]
   end
 end
