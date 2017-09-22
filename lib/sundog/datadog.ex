@@ -8,7 +8,7 @@ defmodule Sundog.Datadog do
     |> DateTime.to_unix
   end
 
-  def query_last_datapoint_time(metric, seconds_ago \\ 3600) do
+  def query_series_latest_time(metric, seconds_ago \\ 3600) do
     DDURI.datadog_uri(
       "v1/query",
       from: now() - seconds_ago,
