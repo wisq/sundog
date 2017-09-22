@@ -2,7 +2,7 @@ defmodule Sundog.ParserTest do
   use ExUnit.Case
   alias Sundog.Parser
 
-  test "parses GOES text data" do
+  test "parse/1 parses GOES text data" do
     {headers, data} = Parser.parse(File.read!(
       "test/data/noaa/goes-xray-flux-primary.txt"))
 

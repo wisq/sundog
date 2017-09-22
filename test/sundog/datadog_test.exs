@@ -14,7 +14,7 @@ defmodule Sundog.DatadogTest do
     |> Enum.join
   end
 
-  test "generates correct URIs from config" do
+  test "datadog_uri/2 generates correct URIs from config" do
     Application.put_env(:sundog, :datadog_api_key, api_key = random_string())
     Application.put_env(:sundog, :datadog_application_key, app_key = random_string())
     Application.put_env(:sundog, :datadog_host, host = random_string())
@@ -37,7 +37,7 @@ defmodule Sundog.DatadogTest do
     assert q["key2"] == value2
   end
 
-  test "generates correct URIs from environment" do
+  test "datadog_uri/2 generates correct URIs from environment" do
     Application.delete_env(:sundog, :datadog_api_key)
     Application.delete_env(:sundog, :datadog_application_key)
     Application.delete_env(:sundog, :datadog_host)
@@ -64,7 +64,7 @@ defmodule Sundog.DatadogTest do
     assert q["key4"] == value4
   end
 
-  test "falls back to hostname" do
+  test "datadog_uri/2 falls back to get_os_hostname/0" do
     Application.put_env(:sundog, :datadog_api_key, "dummy")
     Application.put_env(:sundog, :datadog_application_key, "dummy")
     Application.delete_env(:sundog, :datadog_host)
@@ -76,7 +76,7 @@ defmodule Sundog.DatadogTest do
     assert q["host"] == Datadog.get_os_hostname
   end
 
-  test "hostname is memoized" do
+  test "get_os_hostname/0 is memoized" do
     host1 = Datadog.get_os_hostname
     with_mock System, [cmd: fn(_, _) -> raise "System.cmd called" end] do
       assert Datadog.get_os_hostname == host1
