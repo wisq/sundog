@@ -30,6 +30,7 @@ defmodule Sundog.Mixfile do
       {:memoize, "~> 1.2"},
       {:mock, "~> 0.2.0", only: :test},
       {:exvcr, "~> 0.8", only: [:dev, :test]},
+      {:briefly, "~> 0.3", only: :test},
     ]
   end
 end
