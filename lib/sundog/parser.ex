@@ -5,7 +5,7 @@ defmodule Sundog.Parser do
             |> Enum.group_by(&line_type/1)
 
     headers = parse_headers(lines[:header])
-    data = parse_data(headers, lines[:data])
+    data = parse_data(headers |> Map.new, lines[:data])
 
     {headers, data}
   end
@@ -22,8 +22,9 @@ defmodule Sundog.Parser do
   defp parse_headers(headers) do
     headers
     |> Enum.map(&parse_header_line/1)
-    |> Enum.filter(fn x -> !is_nil(x) end)
-    |> Map.new
+    |> Enum.reject(&is_nil/1)
+    |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
+    |> Map.new(&nested_header/1)
   end
 
   defp parse_header_line(line) do
@@ -36,6 +37,34 @@ defmodule Sundog.Parser do
   defp parse_data(%{"Missing data" => missing}, data) do
     data
     |> Enum.map(&(parse_data_line(&1, missing)))
+  end
+
+  defp nested_header({key, value}) do
+    {key, value |> nested_header_value}
+  end
+
+  defp nested_header_value([header]) do
+    if String.contains?(header, "=") do
+      [split_on_equals(header)]
+      |> Map.new
+    else
+      header
+    end
+  end
+
+  defp nested_header_value(headers) do
+    headers
+    |> Enum.map(&split_on_equals/1)
+    |> Map.new
+  end
+
+  defp split_on_equals(str) do
+    [key, value] =
+      str
+      |> String.split("=", parts: 2)
+      |> Enum.map(&String.trim/1)
+
+    {key, value}
   end
 
   defp parse_data_line(line, missing) do

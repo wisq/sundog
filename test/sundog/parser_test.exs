@@ -9,6 +9,8 @@ defmodule Sundog.ParserTest do
     assert headers["Source"] == "GOES-15"
     assert headers["Location"] == "W135"
     assert headers["Missing data"] == "-1.00e+05"
+    assert headers["Label"]["Short"] == "0.05- 0.4 nanometer"
+    assert headers["Label"]["Long"]  == "0.1 - 0.8 nanometer"
 
     assert Enum.count(data) == 120
     {:ok, stamp0} = DateTime.from_unix(1504686600)
