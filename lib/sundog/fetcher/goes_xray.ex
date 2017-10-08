@@ -13,17 +13,20 @@ defmodule Sundog.Fetcher.GoesXray do
 
   def handle_fetched_data(headers, data, state) do
     source = headers |> Map.fetch!("Source")
-    [short_data, long_data] = split_data(data, 2)
 
-    Submitter.submit_datapoints("sundog.goes.xray", short_data, state.tags ++ [source: source, wavelength: "short"])
-    Submitter.submit_datapoints("sundog.goes.xray", long_data,  state.tags ++ [source: source, wavelength: "long"])
+    [short: 1, long: 2]
+    |> Enum.each(fn {wavelength, index} ->
+      points = extract_data(data, index)
+      count = Submitter.submit_datapoints(
+        "sundog.goes.xray",
+        points,
+        state.tags ++ [source: source, wavelength: wavelength]
+      )
+
+      Logger.info("#{fetcher_name(state)}: Submitted #{count} #{wavelength}-wave stats.")
+    end)
 
     {:ok, state}
-  end
-
-  def split_data(data, count) do
-    (1..count)
-    |> Enum.map(&extract_data(data, &1))
   end
 
   def extract_data(data, index) do
