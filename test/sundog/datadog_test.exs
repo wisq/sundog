@@ -26,11 +26,21 @@ defmodule Sundog.DatadogTest do
 
     # Ensure that our concept of "now" changes
     # based on when this test was recorded.
-    now = File.stat!("fixture/vcr_cassettes/query_cpu_idle.json",
-                     time: :posix).ctime
+    now = extract_cassette_date("query_cpu_idle")
+          |> Timex.to_unix
 
     assert latest < now # can fail if NTP sync badly off
     assert_in_delta latest, now, 60.0 # within one minute
+  end
+
+  defp extract_cassette_date(name) do
+    File.read!("fixture/vcr_cassettes/#{name}.json")
+    |> Poison.decode!
+    |> List.first
+    |> Map.fetch!("response")
+    |> Map.fetch!("headers")
+    |> Map.fetch!("Date")
+    |> Timex.parse!("{RFC1123}")
   end
 
   test "query_series_latest_time/2 handles no datapoints in window" do
