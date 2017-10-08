@@ -15,7 +15,7 @@ defmodule Sundog.Submitter.AgentTest do
     {:ok, pid} = Agent.start_link(@agent_name, metric: metric, tags: tags)
 
     with_mock Datadog, [submit_datapoints: fn(^metric, ^points, ^tags) -> :ok end] do
-      Agent.submit_datapoints(pid, points)
+      assert 5 = Agent.submit_datapoints(pid, points)
       assert called Datadog.submit_datapoints(metric, points, tags)
     end
 
@@ -35,12 +35,12 @@ defmodule Sundog.Submitter.AgentTest do
     points2 = overlap_points ++ after_points
 
     with_mock Datadog, [submit_datapoints: fn(^metric, ^points1, ^tags) -> :ok end] do
-      Agent.submit_datapoints(pid, points1)
+      assert 6 = Agent.submit_datapoints(pid, points1)
       assert called Datadog.submit_datapoints(metric, points1, tags)
     end
 
     with_mock Datadog, [submit_datapoints: fn(^metric, ^after_points, ^tags) -> :ok end] do
-      Agent.submit_datapoints(pid, points2)
+      assert 3 = Agent.submit_datapoints(pid, points2)
       assert called Datadog.submit_datapoints(metric, after_points, tags)
     end
 
@@ -55,13 +55,13 @@ defmodule Sundog.Submitter.AgentTest do
     {:ok, pid} = Agent.start_link(@agent_name, metric: metric, tags: tags)
 
     with_mock Datadog, [submit_datapoints: fn(^metric, ^points, ^tags) -> :ok end] do
-      Agent.submit_datapoints(pid, points)
+      assert 5 = Agent.submit_datapoints(pid, points)
       assert called Datadog.submit_datapoints(metric, points, tags)
     end
 
     with_mock Datadog, [submit_datapoints: fn(_, _, _) -> raise "don't call me" end] do
-      Agent.submit_datapoints(pid, points)
-      Agent.submit_datapoints(pid, points)
+      assert 0 = Agent.submit_datapoints(pid, points)
+      assert 0 = Agent.submit_datapoints(pid, points)
     end
 
     GenServer.stop(pid)

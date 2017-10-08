@@ -75,17 +75,17 @@ defmodule Sundog.SubmitterTest do
       (^metric, ^points1, ^tags1) -> :ok
       (^metric, ^points2, ^tags2) -> :ok
     end] do
-      Submitter.submit_datapoints(metric, points1, tags1)
-      Submitter.submit_datapoints(metric, points2, tags2)
+      assert 5 = Submitter.submit_datapoints(metric, points1, tags1)
+      assert 5 = Submitter.submit_datapoints(metric, points2, tags2)
       assert called Datadog.submit_datapoints(metric, points1, tags1)
       assert called Datadog.submit_datapoints(metric, points2, tags2)
     end
 
     with_mock Datadog, [submit_datapoints: fn(_, _, _) -> raise "don't call me" end] do
-      Submitter.submit_datapoints(metric, points1, tags1)
-      Submitter.submit_datapoints(metric, points2, tags2)
-      Submitter.submit_datapoints(metric, points1, tags1)
-      Submitter.submit_datapoints(metric, points2, tags2)
+      assert 0 = Submitter.submit_datapoints(metric, points1, tags1)
+      assert 0 = Submitter.submit_datapoints(metric, points2, tags2)
+      assert 0 = Submitter.submit_datapoints(metric, points1, tags1)
+      assert 0 = Submitter.submit_datapoints(metric, points2, tags2)
     end
   end
 
