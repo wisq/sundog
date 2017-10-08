@@ -18,22 +18,30 @@ defmodule Sundog.Datadog do
     |> HTTPoison.get!
     |> Map.fetch!(:body)
     |> Poison.decode!
-    |> Map.fetch!("series")
-    |> List.first # first series returned
-    |> Map.fetch!("pointlist")
-    |> List.last  # last datapoint
-    |> List.first # time
+    |> series_latest_time
+  end
+
+  def series_latest_time(%{"series" => [%{"pointlist" => points}]}) do
+    [time, _value] = points |> List.last
+
+    time
     |> round      # float to int
     |> div(1000)  # ms to s
   end
+
+  def series_latest_time(%{"series" => [%{"pointlist" => []}]}), do: nil
+  def series_latest_time(%{"series" => []}), do: nil
 
   @content_type_json ["Content-Type": "application/json"]
 
   def submit_datapoints(metric, points, tags \\ []) do
     body = datapoints_body(metric, points, tags) |> Poison.encode!
 
-    DDURI.datadog_uri("v1/series")
-    |> HTTPoison.post!(body, @content_type_json)
+    %HTTPoison.Response{status_code: 202} =
+      DDURI.datadog_uri("v1/series")
+      |> HTTPoison.post!(body, @content_type_json)
+
+    :ok
   end
 
   defp datapoints_body(metric, points, tags) do

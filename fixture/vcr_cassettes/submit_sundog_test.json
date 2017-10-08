@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "{\"series\":[{\"type\":\"gauge\",\"tags\":\"\",\"points\":[[1507431018,10],[1507431078,20],[1507431138,30]],\"metric\":\"sundog.test.1\",\"host\":\"VCR_DATADOG_HOST\"}]}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://app.datadoghq.com/api/v1/series?api_key=VCR_DATADOG_API_KEY&application_key=VCR_DATADOG_APPLICATION_KEY&host=VCR_DATADOG_HOST"
+    },
+    "response": {
+      "body": "{\"status\": \"ok\"}",
+      "headers": {
+        "Date": "Sun, 08 Oct 2017 02:53:18 GMT",
+        "Content-Type": "text/json",
+        "Content-Length": "16",
+        "Connection": "keep-alive",
+        "DD-POOL": "propjoe",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15724800;"
+      },
+      "status_code": 202,
+      "type": "ok"
+    }
+  }
+]
