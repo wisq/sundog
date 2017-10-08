@@ -17,7 +17,7 @@ defmodule Sundog.Submitter.Agent do
   end
 
   def submit_datapoints(pid, points) do
-    GenServer.cast(pid, {:submit, points})
+    GenServer.call(pid, {:submit, points})
   end
 
   def start_link(name, opts) do
@@ -29,8 +29,7 @@ defmodule Sundog.Submitter.Agent do
     GenServer.start_link(__MODULE__, initial_state, name: name)
   end
 
-  def handle_cast({:submit, points}, %State{} = state) do
-    IO.inspect(state)
+  def handle_call({:submit, points}, _from, %State{} = state) do
     cutoff = [state.latest_time, datadog_cutoff_time()]
              |> Enum.max
 
@@ -40,7 +39,7 @@ defmodule Sundog.Submitter.Agent do
 
     state = state |> datadog_submit(points)
 
-    {:noreply, state}
+    {:reply, Enum.count(points), state}
   end
 
   defp datadog_cutoff_time do
@@ -49,8 +48,11 @@ defmodule Sundog.Submitter.Agent do
     |> Timex.to_unix
   end
 
-  defp point_to_unix_time({time, value}) do
+  defp point_to_unix_time({%DateTime{} = time, value}) do
     {time |> DateTime.to_unix, value}
+  end
+  defp point_to_unix_time({time, value}) when is_integer(time) do
+    {time, value}
   end
 
   defp point_more_recent_than({time, _value}, cutoff) do
