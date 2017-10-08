@@ -1,6 +1,5 @@
 defmodule Sundog.Submitter.AgentSupervisorTest do
   use ExUnit.Case
-  import Mock
 
   alias Sundog.Submitter.AgentSupervisor, as: AgSup
 
