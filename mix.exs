@@ -14,6 +14,7 @@ defmodule Sundog.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Sundog, []},
       extra_applications: [:logger]
     ]
   end

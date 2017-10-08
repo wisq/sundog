@@ -67,6 +67,5 @@ defmodule Sundog.Datadog do
   defp encode_tags(tags) do
     tags
     |> Enum.map(fn {k, v} -> "#{k}:#{v}" end)
-    |> Enum.join(",")
   end
 end
