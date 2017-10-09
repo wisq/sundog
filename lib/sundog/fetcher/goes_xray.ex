@@ -15,16 +15,8 @@ defmodule Sundog.Fetcher.GoesXray do
     source = headers |> Map.fetch!("Source")
 
     [short: 1, long: 2]
-    |> Enum.each(fn {wavelength, index} ->
-      points = extract_data(data, index)
-      count = Submitter.submit_datapoints(
-        "sundog.goes.xray",
-        points,
-        state.tags ++ [source: source, wavelength: wavelength]
-      )
-
-      Logger.info("#{fetcher_name(state)}: Submitted #{count} #{wavelength}-wave stats.")
-    end)
+    |> Enum.map(&async_submit(&1, data, source, state))
+    |> Enum.map(&Task.await/1)
 
     {:ok, state}
   end
@@ -35,5 +27,18 @@ defmodule Sundog.Fetcher.GoesXray do
       {time, Enum.at(item, index)}
     end)
     |> Enum.reject(fn {_t, v} -> is_nil(v) end)
+  end
+
+  def async_submit({wavelength, index}, data, source, state) do
+    Task.async(fn ->
+      points = extract_data(data, index)
+      count = Submitter.submit_datapoints(
+        "sundog.goes.xray",
+        points,
+        state.tags ++ [source: source, wavelength: wavelength]
+      )
+
+      Logger.info("#{fetcher_name(state)}: Submitted #{count} #{wavelength}-wave stats.")
+    end)
   end
 end
