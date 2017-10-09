@@ -1,0 +1,20 @@
+all: hooks
+
+.PHONY: hooks
+
+hooks:
+	cd .git/hooks && ln -nsf ../../hooks/* ./
+
+local_sudo_deploy:
+	MIX_ENV=prod mix release --no-tar
+	sudo -u sundog rsync --delete -rt --exclude 'var/' \
+		_build/prod/rel/sundog/ \
+		/home/sundog/app/sundog/
+	sudo -u sundog /home/sundog/app/sundog/bin/sundog deploy_restart
+
+remote_ssh_deploy:
+	MIX_ENV=prod mix release --no-tar
+	rsync --delete -rt --exclude 'var/' \
+		_build/prod/rel/sundog/ \
+		sundog@SOME-HOST:app/sundog/
+	ssh sundog@SOME-HOST app/sundog/bin/sundog deploy_restart

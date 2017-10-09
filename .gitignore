@@ -19,5 +19,10 @@ erl_crash.dump
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
 
-# Credentials used for recording VCR tests.
-config/test_vcr.exs
+# Ignore real config, user must copy example.
+/config/test_vcr.exs
+/config/datadog.exs
+/config/prod.exs
+/rel/config.exs
+Makefile
+.cookie.*
