@@ -33,9 +33,42 @@ defmodule Sundog.Parser do
     end
   end
 
+  defp parse_missing(missing) do
+    values =
+      cond do
+        missing |> String.contains?(", ") ->
+          missing
+          |> String.split(",")
+          |> Enum.map(&String.trim/1)
+          |> Enum.map(&parse_missing/1)
+
+        missing |> String.contains?(" = ") ->
+          missing
+          |> String.split("=", parts: 2)
+          |> List.last
+          |> String.trim
+          |> to_list
+
+        true ->
+          missing
+          |> String.trim
+          |> to_list
+      end
+
+    values |> List.flatten
+  end
+
+  defp to_list(list) when is_list(list), do: list
+  defp to_list(value), do: [value]
+
   defp parse_data(%{"Missing data" => missing}, data) do
-    data
-    |> Enum.map(&(parse_data_line(&1, missing)))
+    missing_values = parse_missing(missing)
+    data |> Enum.map(&(parse_data_line(&1, missing_values)))
+  end
+
+  defp parse_data(%{"Missing data values" => missing}, data) do
+    missing_values = parse_missing(missing)
+    data |> Enum.map(&(parse_data_line(&1, missing_values)))
   end
 
   defp parse_data_line(line, missing) do
@@ -52,6 +85,19 @@ defmodule Sundog.Parser do
     [time | data]
   end
 
-  defp parse_data_field(missing, missing), do: nil
-  defp parse_data_field(field, _missing), do: String.to_float(field)
+  defp parse_data_field(field, missing) do
+    if missing |> Enum.member?(field) do
+      nil
+    else
+      to_number(field)
+    end
+  end
+
+  defp to_number(str) do
+    if str |> String.contains?(".") do
+      str |> String.to_float
+    else
+      str |> String.to_integer
+    end
+  end
 end
