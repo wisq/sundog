@@ -13,10 +13,10 @@ To get these benefits, however, you'll need to do some extra steps.
 
 First, we need a few more files:
 
-* `config/prod.exs`: Your production config.  If you want the same config in your local development and deployed versions, then just copy `dev.exs` to `prod.exs`.  Otherwise, copy `sundog.exs` and edit the config as needed.
+* `config/prod.exs`: Your production config.  If you want the same config in your local development and deployed versions, then just copy `dev.exs` to `prod.exs`.  Otherwise, copy `datadog.example.exs` and edit the config as needed.
 * `rel/config.exs`: Your release config.  Copy this from `rel/config.example.exs` and edit as needed (see below).
   * If `include_erts` is `true`, then (in theory) the deploy is self-contained and doesn't need Erlang/Elixir.  However, you'll need very similar OS, architecture, and library versions to make this work.
-* (optional) `Makefile`: Makes deploying easier.  Copy `Makefile.example`, (optionally) rename one of the `deploy_*` targets to just `deploy`, and delete the rest.
+* (optional) `Makefile`: Makes deploying easier.  Copy `Makefile.example`, (optionally) rename one of the `deploy_*` targets to just `deploy`, and delete the other one.
 
 Now, either run `make deploy` (if you did all of the above), or check the `Makefile.example` to see how you might do a deploy yourself.  (Since this is your first deploy, it's normal to see the "not responding to pings" error — you haven't started it yet.)
 
