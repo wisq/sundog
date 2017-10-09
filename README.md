@@ -33,6 +33,8 @@ Sundog is written in Elixir, which is a language running on top of Erlang.  You'
 
 If you follow the [Elixir install instructions](https://elixir-lang.org/install.html), you should end up with both of these.  Most of the automatic (i.e. packaged) installs will automatically install Erlang for you.  The manual install methods include instructions on installing Erlang.
 
+If you're installing the Debian/Ubuntu packages, make sure to include `erlang-dev` (the Erlang headers) and `erlang-parsetools` (some development tools for parsing).  These are needed by Sundog's dependencies.
+
 Sundog was written in Elixir 1.5 running on Erlang 20.  You can try running it under older versions, but there's no guarantees it'll work.
 
 ## Installation
