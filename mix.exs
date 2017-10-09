@@ -32,6 +32,10 @@ defmodule Sundog.Mixfile do
       {:mock, "~> 0.2.0", only: :test},
       {:exvcr, "~> 0.8", only: [:dev, :test]},
       {:briefly, "~> 0.3", only: :test},
+
+      # Fix https://github.com/bitwalker/distillery/issues/321
+      {:distillery, git: "https://github.com/bitwalker/distillery.git",
+        ref: "4c154e013a27d9f82d8cff147309674eb41e3db4", runtime: false},
     ]
   end
 end
