@@ -21,6 +21,7 @@ defmodule Sundog do
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Sundog.Supervisor]
 
+    Logger.info("Sundog starting up ...")
     Supervisor.start_link(children, opts)
   end
 
