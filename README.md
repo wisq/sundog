@@ -12,18 +12,32 @@ This is a great chance to monitor the sun and teach myself about Elixir design, 
 
 ## Stats logged
 
-### `sundog.goes.xray`
+### GOES X-Ray Flux
 
-Solar X-ray flux data.  This is retrieved from two URLs (primary/secondary) and aggregated into a single Datadog stat for ease of graphing.
+Solar X-ray flux data is logged to the `sundog.goes.xray` stat (watts per cubic metre).  This is retrieved from two URLs (primary/secondary) and aggregated into a single Datadog stat for ease of graphing.
 
 Tags:
 
 * `primary` (true/false): Whether the data was retrieved from the primary dataset, or the secondary one.
   * Generally, it seems the newer satellite is the primary.
-* Tag `source` (e.g. "GOES-15"): What satellite the data is from.
-* Tag `wavelength` (short/long): What X-ray wavelength is being collected.
+* `source` (e.g. "GOES-15"): What satellite the data is from.
+* `wavelength` (short/long): What X-ray wavelength is being collected.
   * At the time of writing, `short` is 0.5 to 4.0 Ångströms (tenths of a nanometre), and `long` is 1.0 to 8.0 Ångströms.
   * Thus, there's significant overlap between the two.
+
+### ACE Solar Wind Data
+
+The SWEPAM instrument from the ACE satellite is logged to three different stats, giving information about the current solar wind activity:
+
+* `sundog.ace_swepam.proton_density` (protons per cubic metre)
+* `sundog.ace_swepam.bulk_speed` (kilometres per second)
+* `sundog.ace_swepam.ion_temperature` (degrees Kelvin)
+
+Tags:
+
+* `status` (nominal/bad_data/no_data): An advisory field in the SWEPAM data.
+  * Can be used to filter graphs to reliable (`nominal`) data if you're experiencing disruptive spikes during `bad_data` segments.
+  * As with other stats, if the data is truly missing, Sundog will not submit any data to Datadog for that time point.
 
 ## Dependencies
 
