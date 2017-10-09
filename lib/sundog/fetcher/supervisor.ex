@@ -16,7 +16,7 @@ defmodule Sundog.Fetcher.Supervisor do
           url: "http://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt",
           tags: [primary: true],
         },
-        id: :goes_xray_primary
+        id: :sundog_goes_xray_primary
       ),
 
       Supervisor.child_spec(
@@ -25,7 +25,16 @@ defmodule Sundog.Fetcher.Supervisor do
           url: "http://services.swpc.noaa.gov/text/goes-xray-flux-secondary.txt",
           tags: [primary: false],
         },
-        id: :goes_xray_secondary
+        id: :sundog_goes_xray_secondary
+      ),
+
+      Supervisor.child_spec(
+        {
+          Fetch.AceSwepam,
+          url: "http://services.swpc.noaa.gov/text/ace-swepam.txt",
+          tags: [],
+        },
+        id: :sundog_ace_swepam
       ),
     ]
 
