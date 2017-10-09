@@ -2,10 +2,6 @@ defmodule Sundog.Submitter.Agent do
   use GenServer
   alias Sundog.Datadog
 
-  # Datadog doesn't allow you to backfill stats older than 1 hour.
-  # We'll use 55 minutes to be safe.
-  @datadog_backfill_minutes 55
-
   defmodule State do
     @enforce_keys [:metric, :tags, :latest_time]
     defstruct(
@@ -30,22 +26,13 @@ defmodule Sundog.Submitter.Agent do
   end
 
   def handle_call({:submit, points}, _from, %State{} = state) do
-    cutoff = [state.latest_time, datadog_cutoff_time()]
-             |> Enum.max
-
     points = points
              |> Enum.map(&point_to_unix_time/1)
-             |> Enum.filter(&point_more_recent_than(&1, cutoff))
+             |> Enum.filter(&point_more_recent_than(&1, state.latest_time))
 
     state = state |> datadog_submit(points)
 
     {:reply, Enum.count(points), state}
-  end
-
-  defp datadog_cutoff_time do
-    Timex.now
-    |> Timex.subtract(Timex.Duration.from_minutes(@datadog_backfill_minutes))
-    |> Timex.to_unix
   end
 
   defp point_to_unix_time({%DateTime{} = time, value}) do
