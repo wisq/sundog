@@ -12,7 +12,11 @@ defmodule Sundog.Submitter.AgentSupervisor do
   end
 
   def init(_) do
-    agent_spec = Supervisor.child_spec(Agent, start: {Agent, :start_link, []})
+    agent_spec = Supervisor.child_spec(
+      Agent,
+      start: {Agent, :start_link, []},
+      restart: :temporary, # on-demand only
+    )
     Supervisor.init([agent_spec], strategy: :simple_one_for_one)
   end
 

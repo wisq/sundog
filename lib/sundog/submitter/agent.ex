@@ -1,5 +1,7 @@
 defmodule Sundog.Submitter.Agent do
   use GenServer
+  require Logger
+
   alias Sundog.Datadog
 
   defmodule State do
@@ -17,12 +19,14 @@ defmodule Sundog.Submitter.Agent do
   end
 
   def start_link(name, opts) do
-    initial_state = %State{
+    state = %State{
       metric: opts[:metric],
       tags: opts[:tags],
       latest_time: 0,
     }
-    GenServer.start_link(__MODULE__, initial_state, name: name)
+
+    Logger.info "Starting Datadog submitter for #{inspect(state.metric)} with tags #{inspect(state.tags)}."
+    GenServer.start_link(__MODULE__, state, name: name)
   end
 
   def handle_call({:submit, points}, _from, %State{} = state) do
