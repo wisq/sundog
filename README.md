@@ -69,7 +69,7 @@ For beginners, I recommend just running `mix run --no-halt`.  This will launch S
 If you didn't put your Datadog credentials in `config/datadog.exs`, you'll need to supply them via environment variables.  For example:
 
 ```
-DD_API_KEY="a7318e3aa62fe0b9655c66d67010ae46" DD_APPLICATION_KEY="1f879eff3eb0c6eb9879010385c0293bda8db611" DD_HOST="hostname.exmaple.org" mix run --no-halt
+DD_API_KEY="a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5" DD_APPLICATION_KEY="a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9" DD_HOST="hostname.exmaple.org" mix run --no-halt
 ```
 
 ### Deploying
