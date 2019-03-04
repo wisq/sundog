@@ -4,10 +4,10 @@ defmodule Sundog.FetcherTest do
 
   alias Sundog.Fetcher
 
-  @url "http://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt"
+  @url "https://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt"
 
   defmodule StaticUrlFetcher do
-    use Fetcher, url: "http://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt"
+    use Fetcher, url: "https://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt"
 
     def handle_fetched_data(headers, data, state) do
       send(state.tags[:static_pid], {:handled, headers, data, state})

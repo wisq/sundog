@@ -13,7 +13,7 @@ defmodule Sundog.Fetcher.Supervisor do
       Supervisor.child_spec(
         {
           Fetch.GoesXray,
-          url: "http://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt",
+          url: "https://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt",
           tags: [primary: true],
         },
         id: :sundog_goes_xray_primary
@@ -22,7 +22,7 @@ defmodule Sundog.Fetcher.Supervisor do
       Supervisor.child_spec(
         {
           Fetch.GoesXray,
-          url: "http://services.swpc.noaa.gov/text/goes-xray-flux-secondary.txt",
+          url: "https://services.swpc.noaa.gov/text/goes-xray-flux-secondary.txt",
           tags: [primary: false],
         },
         id: :sundog_goes_xray_secondary
@@ -31,7 +31,7 @@ defmodule Sundog.Fetcher.Supervisor do
       Supervisor.child_spec(
         {
           Fetch.AceSwepam,
-          url: "http://services.swpc.noaa.gov/text/ace-swepam.txt",
+          url: "https://services.swpc.noaa.gov/text/ace-swepam.txt",
           tags: [],
         },
         id: :sundog_ace_swepam

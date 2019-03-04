@@ -7,7 +7,7 @@ defmodule Sundog.Fetcher.GoesXrayTest do
   alias Sundog.Submitter
   alias Sundog.Parser
 
-  @primary_url "http://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt"
+  @primary_url "https://services.swpc.noaa.gov/text/goes-xray-flux-primary.txt"
 
   test "handle_fetch_data/3 submits data to Datadog" do
     state = %State{url: @primary_url, tags: [primary: true]}
